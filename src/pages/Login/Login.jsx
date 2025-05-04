@@ -1,0 +1,54 @@
+import { Link } from "react-router"
+import { useNavigate } from "react-router";
+import { useState } from "react";
+import "./Register.css"
+
+
+function Login() {
+  const [error, setError] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        credentials: 'include',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      })
+      const data = await response.json();
+      if (data.succes) {
+        navigate('/');
+      }
+      else {
+        setError(data.error || 'Login failed');
+      }
+    }
+    catch (err) {
+      setError('Network error')
+    }
+  }
+  return (
+    <div className="container">
+      <h1>Login</h1>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <p>Create new account? <Link to="/Register">register</Link></p>
+      <form onSubmit={submit} className="form">
+        <div class="input_wrapper">
+          <input type="text" id="email" className="field" value={email} onChange={e => setEmail(e.target.value)} required />
+          <label for="email">email</label>
+        </div>
+        <div class="input_wrapper">
+          <input type="password" id="password" className="field" value={password} onChange={e => setPassword(e.target.value)} required />
+          <label for="password">password</label>
+        </div>
+        <input type="submit" value={'Submit'} className="submit-btn" />
+      </form>
+    </div>
+  )
+}
+
+export default Login

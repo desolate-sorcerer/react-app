@@ -1,0 +1,44 @@
+.msg-display {
+  width: 45%;
+  height: 100vh;
+  margin: 100px auto;
+  border-radius: 20px;
+}
+
+.msg-send {
+  width: 50%;
+  height: 100px;
+  background-color: #3a3a3a;
+  border-radius: 20px;
+  position: sticky;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.msg-input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1em;
+  color: #fff;
+  font-size: 18px;
+}
+
+.send-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  filter: brightness(0.8);
+}

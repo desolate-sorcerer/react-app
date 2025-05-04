@@ -1,0 +1,32 @@
+.side-bar {
+  background-color: #3a3a3a;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  width: 20%;
+  height: 90vh;
+  padding: 1em;
+  position: sticky;
+  top: 3vh;
+}
+
+.filter-container {
+  margin: 50px 0;
+}
+
+.filter-btn {
+  background-color: #d17600;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.5em 0;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  filter: brightness(0.8);
+}

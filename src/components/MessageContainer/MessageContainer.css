@@ -1,0 +1,11 @@
+.msg-container {
+  width: 100%;
+  background-color: #aaa;
+  border-radius: 15px;
+  padding: 1em 0;
+  color: #000;
+}
+
+.msg-container span {
+  padding: 1em;
+}

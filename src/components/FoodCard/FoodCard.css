@@ -1,0 +1,14 @@
+.card {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: min(5em, 8%);
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}

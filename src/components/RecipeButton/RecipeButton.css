@@ -1,0 +1,15 @@
+.recipe-button {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #d17600;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s;
+  color: #fff;
+  font-size: 14px;
+}
+
+.recipe-button:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}

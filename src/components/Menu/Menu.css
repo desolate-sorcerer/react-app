@@ -1,0 +1,30 @@
+.menu {
+  color: #fff;
+  width: 70%;
+  margin: 0 2%;
+}
+
+.search-bar {
+  width: 30%;
+  margin: 20px auto;
+  background-color: transparent;
+  border: 1px solid #3a3a3a;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.search-btn {
+  background-color: transparent;
+  position: relative;
+  right: 35px;
+  border: none;
+  color: #fff;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.7);
+}
