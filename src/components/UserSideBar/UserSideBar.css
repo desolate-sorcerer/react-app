@@ -1,0 +1,23 @@
+.user-side-bar {
+  width: 20%;
+  display: inline;
+  float: left;
+}
+
+.user-link {
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+  transition: 0.2s;
+  filter: brightness(80%);
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.user-link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

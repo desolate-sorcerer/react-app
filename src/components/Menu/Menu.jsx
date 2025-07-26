@@ -3,7 +3,7 @@ import { FaSearch } from 'react-icons/fa'
 import FoodCard from '../FoodCard/FoodCard'
 import { useEffect, useState } from "react";
 
-function Menu() {
+function Menu({ filters }) {
 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,6 +29,33 @@ function Menu() {
     };
     getApi();
   }, []);
+
+  useEffect(() => {
+    const filterItems = async () => {
+      if (filters.category.length > 0 || filters.type.length > 0 || filters.rating.length > 0) {
+        setLoading(true);
+        try {
+          const res = await fetch("http://localhost:5000/filter", {
+            params: {
+              category: filters.category.join(','),
+              type: filters.type.join(','),
+              rating: filters.rating.join(',')
+            }
+          });
+          const data = await res.json();
+          setItems(data);
+        }
+        catch (err) {
+          setError(err);
+        }
+        finally {
+          setLoading(false)
+        };
+      }
+    }
+    filterItems();
+  }, []);
+
 
   const handleSearch = async (e) => {
     e.preventDefault();

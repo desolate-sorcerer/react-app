@@ -1,0 +1,47 @@
+.user-bio {
+  width: 75%;
+  float: right;
+  border-radius: 10px;
+  margin: 2% 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.user-bio p {
+  filter: brightness(0.8);
+}
+
+.user-bio button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #eee;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.2s;
+  margin: 1em 0;
+}
+
+.user-bio button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.user-info,
+.user-recipes,
+.user-books {
+  background-color: #222;
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+
+.user-recipes {
+  width: 30%;
+}
+
+.user-books {
+  width: 30%;
+}

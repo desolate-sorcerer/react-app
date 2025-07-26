@@ -1,0 +1,45 @@
+.user-profile {
+  width: 75%;
+  float: right;
+  display: inline;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.user-background img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.user-desc {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 100px 0 0 0;
+}
+
+.user-stats {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 5em;
+}
+
+.user-img {
+  position: absolute;
+  bottom: 270px;
+  width: 20%;
+}
+
+.user-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}

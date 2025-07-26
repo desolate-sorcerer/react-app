@@ -1,6 +1,10 @@
 import "./User.css"
 import { useNavigate } from "react-router"
 import { useEffect, useState } from "react";
+import UserSideBar from "../../components/UserSideBar/UserSideBar"
+import UserProfile from "../../components/UserProfile/UserProfile"
+import UserBio from "../../components/UserBio/UserBio"
+
 function User() {
   const navigate = useNavigate();
   const [error, setError] = useState();
@@ -46,19 +50,27 @@ function User() {
     }
   }
 
+  const user = {
+    name: 'Nik Mlakar',
+    following: 10,
+    followers: 11,
+    posts: 6,
+    background: '../../../public/img/indian.jpg',
+    img: '../../../public/img/chad.jpg',
+    bio: 'btw i use arch',
+    birth: '1.1.2000',
+    sex: 'male',
+    link: 'nik@gmail.com'
+  }
 
   if (loading) return <div>Loading...</div>
 
   return (
     (error) ? <p style={{ color: 'red' }}>{error}</p> :
-      <div className="profile">
-        <h2>Profile</h2>
-        <form>
-          <input type="text" value={sessionData.name} className="input-data" /><br />
-          <input type="text" value={sessionData.email} className="input-data" /><br />
-          <input type="submit" value="Save changes" className="submit" />
-        </form>
-        <button className="logout" onClick={logout}>Logout</button>
+      <div className="user-page">
+        <UserSideBar />
+        <UserProfile user={user} />
+        <UserBio user={user} />
       </div>
   )
 }

@@ -1,14 +1,29 @@
 .card {
   background-color: #3a3a3a;
   color: #fff;
-  padding: min(5em, 8%);
+  padding: min(2em, 2%);
   border-radius: 10px;
+  transition: 0.2s;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card p {
+  filter: brightness(0.8);
+}
+
+.card:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
 }

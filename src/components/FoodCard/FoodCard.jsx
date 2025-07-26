@@ -1,12 +1,15 @@
 import "./FoodCard.css"
-import RecipeButton from "../RecipeButton/RecipeButton"
 
 function FoodCard({ food }) {
   return (
     <div className="card">
       <img src={food.src} />
-      <p>{food.name}</p>
-      <RecipeButton />
+      <h3>{food.name}</h3>
+      <p>{food.author}</p>
+      <div className="card-bottom">
+        <p>{food.time} min</p>
+        <p>{food.rating} ({food.reviews})</p>
+      </div>
     </div>
   )
 }

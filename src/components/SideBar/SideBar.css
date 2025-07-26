@@ -4,7 +4,7 @@
   border-radius: 0 10px 10px 0;
   width: 20%;
   height: 90vh;
-  padding: 1em;
+  padding: 2em;
   position: sticky;
   top: 3vh;
 }
@@ -13,8 +13,62 @@
   margin: 50px 0;
 }
 
+.filter-container input[type=checkbox] {
+  position: relative;
+  top: 3px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.filter-container input[type=checkbox]:checked {
+  background-color: #38b000;
+  border: none;
+}
+
+.side-bar-items {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+  height: 0;
+  overflow: hidden;
+}
+
+.side-bar-items.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  height: auto;
+  margin-top: 10px;
+}
+
+.side-bar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.side-bar-button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
 .filter-btn {
-  background-color: #d17600;
+  background-color: #38b000;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -28,5 +82,5 @@
 }
 
 .filter-btn:hover {
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
